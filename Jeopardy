@@ -15,7 +15,7 @@ print(filtered['Question'])
 
 jeopardy_data["Float Value"] = jeopardy_data['Value'].apply(lambda x: float(x[1:].replace(',','')) if x != 'None' else 0
 
-filtered = filter_data(jeopardy_data)
+filtered = filter_data(jeopardy_data, ['King'])
 print(filtered['Float Value'].mean())
 
 def get_answer_counts(data):
